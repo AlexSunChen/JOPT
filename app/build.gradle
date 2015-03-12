@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "net.sunchen.jopt"
+        minSdkVersion 8
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.0'
+    compile files('libs/android-support-v13.jar')
+    compile files('libs/dhroid.jar')
+    compile files('libs/httpmime-4.1.1.jar')
+    compile files('libs/image-loader.jar')
+}
